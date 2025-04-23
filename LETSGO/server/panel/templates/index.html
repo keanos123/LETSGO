@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yayın Kontrol Paneli</title>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #videoPlayer { width: 80%; max-width: 1280px; }
+        button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Canlı Yayın</h1>
+    <video id="videoPlayer" controls autoplay></video>
+
+    <div>
+        <button onclick="sendCommand('start')">Yayını Başlat</button>
+        <button onclick="sendCommand('stop')">Durdur</button>
+        <button onclick="sendCommand('toggle_cam')">Kamera Aç/Kapa</button>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
